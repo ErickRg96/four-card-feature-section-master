@@ -48,7 +48,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 .description {
@@ -119,6 +118,11 @@ body {
 }
 
 @media screen and (min-width: 1020px){
+    .container {
+        height: 100vh;
+    }
+
+
     .main-cards {
         height: 100%;
         display: grid;
