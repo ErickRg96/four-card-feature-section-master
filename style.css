@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Variables */
+    /* Colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    /* Font */
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.title-1 {
+    font-weight: 200;
+}
+
+.title-2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--very-dark-blue);
+}
+
+.description {
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.container {
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.description {
+    font-weight: 400;
+    max-width: 580px;
+}
+
+.main-cards {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: -4px 11px 41px -17px var(--grayish-blue);
+    margin-bottom: 10%;
+    padding: 6%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    transition: .5s;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.card h4 {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+    font-size: 18px;
+
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.card img {
+    align-self: flex-end;
+    height: 50px;
+}
+
+.card-cyan {
+    border-top: 4px solid var(--cyan);
+    grid-area: card-cyan;
+}
+
+.card-red {
+    border-top: 4px solid var(--red);
+    grid-area: card-red;
+}
+
+.card-orange {
+    border-top: 4px solid var(--orange);
+    grid-area: card-orange;
+}
+
+.card-blue {
+    border-top: 4px solid var(--blue);
+}
+
+@media screen and (min-width: 1020px){
+    .main-cards {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 25%);
+        /* grid-gap: 20px; */
+        grid-column-gap: 30px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .card:nth-child(2) {
+        margin-bottom: 10px;
+    }
+
+    .card:nth-child(3) {
+        margin-top: 10px;
+    }
+
+    .card-cyan {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+    
+    .card-red {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    
+    .card-orange {
+        grid-area: 3 / 2 / 5 / 3;
+    }
+    
+    .card-blue {
+        grid-area: 2 / 3 / 4 / 4;
+    }
+}
+
