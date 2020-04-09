@@ -73,6 +73,7 @@ body {
 
 .card:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .card:last-child {
@@ -160,4 +161,3 @@ body {
         grid-area: 2 / 3 / 4 / 4;
     }
 }
-
